@@ -1,17 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejemplo con NES.css</title>
+
+    <!-- Fuente pixel que recomienda NES.css -->
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" />
+
+    <!-- La librería CSS: NES.css -->
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+
+    <!-- Mis estilos propios (va de último para que manden sobre la librería) -->
+    <link rel="stylesheet" href="estilo.css" />
 </head>
 <body>
     <h1>Mi primera pagina con NES.css</h1>
-    <p>Prueba de ua libreria CSS.</p>
-    <button type="button">Botón</button>
-    
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet"/>
-    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet"/>
+    <p>Prueba de una libreria CSS.</p>
 
+    <section class="nes-container with-title is-rounded">
+        <h2 class="title">Botones</h2>
+        <button type="button" class="nes-btn">Normal</button>
+        <button type="button" class="nes-btn is-primary">Primary</button>
+        <button type="button" class="nes-btn is-success">Success</button>
+        <button type="button" class="nes-btn is-warning">Warning</button>
+        <button type="button" class="nes-btn is-error">Error</button>
+    </section>
+
+    <section class="nes-container with-title is-rounded">
+        <h2 class="title">Formulario</h2>
+        <input type="text" class="nes-input" placeholder="Tu nombre" />
+        <br /><br />
+        <label><input type="checkbox" class="nes-checkbox" /><span>Me gusta el pixel art</span></label>
+    </section>
+
+    <section class="nes-container is-dark with-title is-rounded">
+        <h2 class="title">Dialogo</h2>
+        <div class="dialogo">
+            <i class="nes-mario"></i>
+            <div class="nes-balloon from-left is-dark">
+                <p>Hola! Esta caja y yo venimos incluidos en la libreria.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="nes-container with-title is-rounded">
+        <h2 class="title">Progreso</h2>
+        <progress class="nes-progress is-success" value="80" max="100"></progress>
+        <progress class="nes-progress is-error" value="30" max="100"></progress>
+        <i class="nes-icon is-large heart"></i>
+        <i class="nes-icon is-large star"></i>
+        <i class="nes-icon is-large coin"></i>
+        <i class="nes-icon is-large trophy"></i>
+    </section>
+
+    <footer>
+        <p>Hecho con <a href="https://nostalgic-css.github.io/NES.css/" target="_blank">NES.css</a></p>
+    </footer>
 </body>
 </html>
